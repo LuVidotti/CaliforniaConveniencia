@@ -1,0 +1,333 @@
+@font-face {
+    font-family: 'icones';
+    src: url(font/icones.ttf);
+}
+
+body {
+    font-family: 'Open Sans', 'icones', sans-serif;
+    background-color: #313147;
+    color: white;
+}
+
+.cabecalho {
+    background-color: #212128;
+    box-shadow: 0 5px 10px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho__logo {
+    width: 15%;
+}
+
+.cabecalho__menu i::before {
+    content: "\e904";
+    font-size: 32px;
+    margin-left: 30px;
+}
+
+.cabecalho__notificacao i::before {
+    content: "\e906";
+    font-size: 32px;
+    margin-right: 30px;
+}
+
+.menu__lateral {
+    background-color: #212128;
+    width: 25vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    left: -25vw;
+    transition: 0.25s;
+}
+
+.menu__lateral--logo {
+    width: 240px;
+    align-self: center;
+    padding: 16px;
+}
+
+
+.menu__lateral--link {
+    height: 50px;
+    display: flex;
+    padding-left: 64px;
+    align-items: center;
+    color: #95999C;
+    font-size: larger;
+    margin-bottom: 50px;
+}
+
+.menu__lateral--link--inicio::before {
+    content: "\e902";
+    position: absolute;
+    left: 24px;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    align-self: center;
+}
+
+.menu__lateral--link--produtos::before {
+    content: "\e901";
+    position: absolute;
+    left: 24px;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    align-self: center;
+}
+
+.menu__lateral--link--contato::before {
+    content: "\e903";
+    position: absolute;
+    left: 24px;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    align-self: center;
+}
+
+.menu__lateral--ativo {
+    left: 0;
+    transform: scale(1);
+}
+
+.menu__lateral--link--inicio-ativo:active {
+    color: white;
+    padding-left: 56px;
+    border-left: 8px solid white;
+}
+
+.menu__lateral--link--produtos-ativo:active {
+    color: white;
+    padding-left: 56px;
+    border-left: 8px solid white;
+}
+
+.menu__lateral--link--contato-ativo:active {
+    color: white;
+    padding-left: 56px;
+    border-left: 8px solid white;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 64px;
+    gap: 16px;
+    text-align: center;
+}
+
+.apresentacao {
+   grid-column: span 2; 
+   grid-row: 1;
+}
+
+.titulos {
+    padding: 64px 0;
+    margin-bottom: 64px;
+    font-size: 32px;
+    font-weight: 700;
+    align-self: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.bebidas__img {
+    width: 144px;
+    margin-bottom: 32px;
+    transition: 1s;
+}
+
+.bebidas__img:hover {
+    transform: scale(1.2);
+}
+
+.apresentacao p {
+    line-height: 1.5em;
+    font-size: larger;
+}
+
+.apresentacao strong {
+    font-weight: bold;
+}
+
+.apresentacao em {
+    font-style: italic;
+}
+
+.bebidas__img {
+    float: top;
+}
+
+.localizacao {
+    padding-top: 32px;
+    grid-row: 2;
+    grid-column: span 2;
+}
+
+.tabela__funcionamento thead {
+    font-weight: bold;
+}
+
+.tabela__funcionamento td, th {
+    border: 2px solid white;
+    padding: 8px;
+}
+
+.mapa {
+    position: absolute;
+    right: 64px;
+    top: 988px;
+}
+
+.video--conteudo {
+    grid-row: 3;
+    grid-column: span 2;
+}
+
+.video {
+    align-items: center;
+    margin-top: 128px;
+}
+
+.rodape {
+    text-align: center;
+    background-color: #212128;
+    box-shadow: 0 5px 10px black;
+    padding: 16px;
+}
+
+.rodape__img {
+    width: 200px;
+    align-self: center;
+    padding: 16px;
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+.principal__produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.titulos--produtos {
+    grid-column: span 4;
+    margin-top: 64px;
+    margin-left: 64px;
+    margin-right: 64px;
+    text-align: center;
+}
+
+.cartao {
+    width: 50%;
+    background-color: #212128;
+    border-radius: 15px;
+    padding: 16px;
+    margin: 32px 64px;
+    text-align: center;
+    transition: 1s;
+}
+
+.cartao:hover {
+    transform: scale(1.1);
+}
+
+.cartao__produto {
+    margin-bottom: 8px;
+}
+
+.cartao__conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.preco {
+    font-weight: bold;
+}
+
+.preco__original {
+    color: red;
+    text-decoration: line-through;
+}
+
+.preco__desconto {
+    color: rgb(44, 229, 44);
+    font-size: larger;
+}
+
+.ver__localizacao {
+    background-color: #3f3f4d;
+    border-radius: 15px;
+    padding: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.ver__localizacao:hover {
+    background-color: #2d2d5a;
+}
+
+.titulos--contato {
+    margin: 64px 64px;
+    text-align: center;
+}
+
+.formulario {
+    margin: 32px 64px;
+}
+
+.formulario label, legend {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.input-padrao {
+    display: block;
+    background-color: #212128;
+    margin-bottom: 24px;
+    padding: 12px 10px;
+    width: 40%;
+}
+
+.contato {
+    margin: 32px 0;
+}
+
+.contato legend {
+    margin-bottom: 32px;
+}
+
+.contato input {
+    margin-top: 18px;
+}
+
+.botao {
+    margin: 32px 0;
+    background-color: #2d2d5a;
+    width: 30%;
+    padding: 20px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #212128;
+    transition: 1s;
+}
+
+.botao:hover {
+    transform: scale(1.2);
+    background-color: #292946;
+    cursor: pointer;
+}
